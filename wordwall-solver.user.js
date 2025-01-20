@@ -22,7 +22,7 @@
   let slashY = 0;
 
   CanvasRenderingContext2D.prototype.fillText = function (text, x, y, maxWidth) {
-    if (!gameOverDetected && text === 'ЗАВЕРШЕНА') {
+    if (!gameOverDetected && (text === 'ЗАВЕРШЕНА' || text === 'COMPLETE')) {
       gameOverDetected = true;
       console.log('Game Over detected');
     }
